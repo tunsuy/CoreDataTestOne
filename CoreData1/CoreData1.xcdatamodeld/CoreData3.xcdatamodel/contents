@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F1021" minimumToolsVersion="Automatic">
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sex" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" parentEntity="Person" syncable="YES">
+        <attribute name="grade" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="teachers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Teacher" syncable="YES"/>
+    </entity>
+    <entity name="Teacher" representedClassName="Teacher" parentEntity="Person" syncable="YES">
+        <attribute name="cource" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="User" syncable="YES"/>
+    <entity name="WorkReport" representedClassName="WorkReport" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creater" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reportDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-153" positionY="18" width="128" height="73"/>
+        <element name="Student" positionX="-360" positionY="-36" width="128" height="75"/>
+        <element name="Teacher" positionX="-333" positionY="117" width="128" height="75"/>
+        <element name="User" positionX="-342" positionY="-153" width="128" height="45"/>
+        <element name="WorkReport" positionX="-65" positionY="-162" width="128" height="105"/>
+    </elements>
+</model>
